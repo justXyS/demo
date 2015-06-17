@@ -1,0 +1,73 @@
+//
+//  header.pch
+//  E小区
+//
+//  Created by apple on 15/1/20.
+//  Copyright (c) 2015年 apple. All rights reserved.
+//
+
+#ifndef E___header_pch
+#define E___header_pch
+
+
+#ifndef __IPHONE_6_0
+#warning "This project uses features only available in iOS SDK 6.0 and later."
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+#import "HttpConnection.h"
+#import "SVProgressHUD.h"
+#import "UIImageView+WebCache.h"
+
+
+#define K_SCREEN_BOUNDS  [[UIScreen mainScreen] bounds]
+#define K_SCREEN_BOUNDS_SIZE  [[UIScreen mainScreen] bounds].size
+//访问成功的信息
+#define SUCCESS @"success"
+//强制下线的通知名
+#define OUT_LINE_NOTIFACATION_NAME @"out"
+//根IP
+#define IP @"http://www.greenwh.com/"
+//接口的前缀
+#define URL_PRE [NSString stringWithFormat:@"%@wap.php/",IP]
+//根据子ID获得商品
+#define URL_GET_GOOD [NSString stringWithFormat:@"%@/Goods/type_goods/",URL_PRE]
+//登陆
+#define URL_LOGIN [NSString stringWithFormat:@"%@/Base/member_login/",URL_PRE]
+//商城标题
+#define URL_GET_GOOD_TYPE [NSString stringWithFormat:@"%@/Goods/goods_type/",URL_PRE]
+//商品详情
+#define URL_GET_GOOD_DETAIL [NSString stringWithFormat:@"%@Goods/goods_info/",URL_PRE]
+//购物车商品
+#define URL_GET_CART_GOOD [NSString stringWithFormat:@"%@Goods/carts/",URL_PRE]
+//加入购物车
+#define URL_GET_CART_INOUT [NSString stringWithFormat:@"%@Goods/incart/",URL_PRE]
+//下单
+#define URL_GET_CART_BUY [NSString stringWithFormat:@"%@Goods/buying/",URL_PRE]
+//购买订单
+#define URL_GET_CART_BUY_ORDER_LIST [NSString stringWithFormat:@"%@Goods/myorder/",URL_PRE]
+//退单(购买)
+#define URL_GET_CART_BUY_ORDER_RETURN [NSString stringWithFormat:@"%@Goods/order_return/",URL_PRE]
+//兑换商品信息
+#define URL_GET_EXCHANGE_GOOD [NSString stringWithFormat:@"%@Exchange/goodslist/",URL_PRE]
+//兑换
+#define URL_GET_EXCHANGE [NSString stringWithFormat:@"%@Exchange/exchange/",URL_PRE]
+//积分交易记录
+#define URL_GET_EXCHANGE_RECORD [NSString stringWithFormat:@"%@Exchange/myorder/",URL_PRE]
+//账户信息
+#define URL_GET_BALANCE [NSString stringWithFormat:@"%@Base/balance/",URL_PRE]
+//充值信息
+#define Create_pay_orderURL [NSString stringWithFormat:@"%@Pay/create_order/",URL_PRE]
+//交易记录
+#define URL_GET_ACCOUNT [NSString stringWithFormat:@"%@Base/account/",URL_PRE]
+//秒杀
+#define URL_GET_KILL_GOOD [NSString stringWithFormat:@"%@Instant/goods_future/",URL_PRE]
+//主颜色
+#define MAIN_COLOR     [UIColor colorWithRed:60./255 green:186./255 blue:92./255 alpha:1]
+//透明主颜色
+#define MAIN_COLOR_8     [UIColor colorWithRed:60./255 green:186./255 blue:92./255 alpha:.8]
+
+#endif
